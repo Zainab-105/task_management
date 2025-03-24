@@ -3,7 +3,7 @@
 	<div class="brand flex-column-auto" id="kt_brand">
 		<!--begin::Logo-->
 		<a href="{{ route('dashboard.index') }}" class="brand-logo">
-			<img style="max-width: 100px; max-height: 50px; position: absolute; vertical-align: middle; margin: -19px 15px 15px 30px;" alt="{{ env('APP_NAME') }}" src="{{ asset('assets/frontend/images/task_logo.jpg') }}" />
+			<img style="max-width: 100px; max-height: 50px; position: absolute; vertical-align: middle; margin: -19px 15px 15px 30px;" alt="{{ env('APP_NAME') }}" src="{{ asset('assets/frontend/images/task_logo.png') }}" />
 		</a>
 		<!--end::Logo-->
 		<!--begin::Toggle-->

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <div class="card card-custom rounded-xl gutter-b bg-dark card-stretch">
+                <div class="card card-custom rounded-xl gutter-b bg-primary card-stretch">
                     <div class="d-flex align-items-center mr-2">
                         <a href="#">
                             <div class="symbol-label px-6 py-8 rounded-xl mr-7">
@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="card card-custom rounded-xl gutter-b bg-dark card-stretch">
+                <div class="card card-custom rounded-xl gutter-b bg-success card-stretch">
                     <div class="d-flex align-items-center mr-2">
                         <a href="#">
                             <div class="symbol-label px-6 py-8 rounded-xl mr-7">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="col-lg-3">
-                <div class="card card-custom rounded-xl gutter-b bg-dark card-stretch">
+                <div class="card card-custom rounded-xl gutter-b bg-danger card-stretch">
                     <div class="d-flex align-items-center mr-2">
                         <a href="{{ route('tasks.index') }}">
                             <div class="symbol-label px-6 py-8 rounded-xl mr-7">

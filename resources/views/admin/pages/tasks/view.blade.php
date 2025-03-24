@@ -15,31 +15,53 @@
             <div class="dataTables_wrapper dt-bootstrap4 no-footer">
                 <div class="form-group col-md-12 row">
                     <div class="col-md-6">
-                        <label class="control-label"><span class="mendatory" style="font-size: 25px;"></span>Title :</label>
+                        <label class="control-label">Title:</label>
                         <h4>{{ $task->title ?? '--' }}</h4>
                     </div>
                     <div class="col-md-6">
-                        <label class="control-label"><span class="mendatory" style="font-size: 25px;"></span>Due Date :</label>
+                        <label class="control-label">Due Date:</label>
                         <h4>{{ $task->due_date ?? '--' }}</h4>
                     </div>
                     <div class="col-md-6">
-                        <label class="control-label"><span class="mendatory" style="font-size: 25px;"></span>Status :</label>
+                        <label class="control-label">Status:</label>
                         <h4>{{ $task->status ?? '--' }}</h4>
                     </div>
                     <div class="col-md-6">
-                        <label class="control-label"><span class="mendatory" style="font-size: 25px;"></span>Assigned To :</label>
+                        <label class="control-label">Assigned To:</label>
                         <h4>{{ $task->user->name ?? '--' }}</h4>
                     </div>
                     <div class="col-md-12">
-                        <div>
-                            <label class="control-label"><span class="mendatory" style="font-size: 25px;"></span>Description : </label>
-                        </div>
-                        <div>
-                            @if($task->description) <h5>{!! $task->description !!}</h5> @else -- @endif
-                        </div>
+                        <label class="control-label">Description:</label>
+                        <h5>{!! $task->description ?? '--' !!}</h5>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="card mt-4">
+        <div class="card-header">
+            <h4>Comments</h4>
+        </div>
+        <div class="card-body">
+            <!-- Comment List -->
+            @foreach ($task->comments as $comment)
+                <div class="mb-3 border-bottom pb-2">
+                    <strong>{{ $comment->user->name }}</strong> - <small>{{ $comment->created_at->diffForHumans() }}</small>
+                    <p>{{ $comment->comment }}</p>
+                </div>
+            @endforeach
+
+            <!-- Add Comment Form -->
+            <form action="{{ route('tasks.comment.store', $task->id) }}" method="POST">
+                @csrf
+                <div class="form-group">
+                    <label>Add a Comment</label>
+                    <textarea name="comment" class="form-control" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+            </form>
         </div>
     </div>
 </div>

@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function () {
         /* Dashboard */
         Route::get('/dashboard',  'dashboard')->name('dashboard.index');
     });
+    Route::post('/tasks/{task}/comment', [TaskController::class, 'storeComment'])->name('tasks.comment.store');
 
     /* User */
     Route::get('users/listing',  [UserController::class, 'listing'])->name('users.listing');

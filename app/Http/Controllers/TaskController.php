@@ -42,9 +42,24 @@ class TaskController extends Controller
 
     public function show(Task $task)
     {
-        $task = Task:: with('user:id,name')->whereId($task->id)->first(); 
+        $task = Task::with(['user:id,name', 'comments.user:id,name'])->whereId($task->id)->first();
         return view('admin.pages.tasks.view', compact('task'))->with(['custom_title' => 'Task']);
     }
+    
+    public function storeComment(Request $request, Task $task)
+    {
+        $request->validate([
+            'comment' => 'required|string|max:1000',
+        ]);
+    
+        $task->comments()->create([
+            'user_id' => auth()->id(),
+            'comment' => $request->comment,
+        ]);
+    
+        return back()->with('success', 'Comment added successfully!');
+    }
+    
 
     public function edit(Task $task)
     {
