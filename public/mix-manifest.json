@@ -1,0 +1,10 @@
+{
+    "/js/plugins.bundle.js": "/js/plugins.bundle.js",
+    "/js/prismjs.bundle.js": "/js/prismjs.bundle.js",
+    "/js/scripts.bundle.js": "/js/scripts.bundle.js",
+    "/js/widgets.js": "/js/widgets.js",
+    "/js/datatables.bundle.js": "/js/datatables.bundle.js",
+    "/css/theme.css": "/css/theme.css",
+    "/css/prismjs.bundle.css": "/css/prismjs.bundle.css",
+    "/css/style.bundle.css": "/css/style.bundle.css"
+}
