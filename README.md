@@ -2,7 +2,7 @@
 This application provides secure task management for teams, featuring OAuth2 authentication and role-based access control. Admin can manage Tasks and Users, Managers can assign tasks, and employees can manage their own tasks.
 
 ## 🚀Features
-* Managers/Employee can register through home page. 
+* Managers can register through home page. 
 
 * User Management: Admin can create users with Manager OR Employee role based on their responsibilities within the organization.
 
@@ -18,7 +18,7 @@ Follow these steps to set up and run the project locally:
 2. Switch to the repo folder and Install Composer & NPM Dependencies:
 ```bash
 composer install
-npm install && npm run dev
+
 ```
 3. Create a copy of the .env.example file and rename it to .env.
 ```bash
@@ -37,18 +37,3 @@ php artisan migrate --seed
 ```bash
 php artisan serve
 ```
-8. Welcome aboard! 😎 Access the application with below credentials in your browser and start managing tasks with ease!
-
-Use the below credentials to login
-> Admin
->> Email: admin@admin.com | Password: Admin@123
-
-> Manager
->> Email: manager@manager.com | Password: Manager@123
-
-> Employee
->> Email: employee@employee.com | Password: Employee@123
-
-## 🚀About Me
-Reach out to me via:
-[Linkedin](https://www.linkedin.com/in/sanjna-choksi/)
